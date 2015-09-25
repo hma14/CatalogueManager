@@ -176,6 +176,10 @@
     <Compile Include="Migrations\201509250237098_initial.Designer.cs">
       <DependentUpon>201509250237098_initial.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201509250348253_initial1.cs" />
+    <Compile Include="Migrations\201509250348253_initial1.Designer.cs">
+      <DependentUpon>201509250348253_initial1.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Catalogue_AngularJSContext.cs" />
     <Compile Include="Models\Category.cs" />
@@ -257,6 +261,9 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\201509250237098_initial.resx">
       <DependentUpon>201509250237098_initial.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201509250348253_initial1.resx">
+      <DependentUpon>201509250348253_initial1.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

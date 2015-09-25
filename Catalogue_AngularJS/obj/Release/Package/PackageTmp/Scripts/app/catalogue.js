@@ -23,7 +23,7 @@ angular.module('CatalogueApp', [])
     var saveState = {};
 
     $scope.getAllCategories = function () {
-        $http.get(window.location.host +  '/api/Categories/').success(function (data, status, headers, config) {
+        $http.get('/api/Categories/').success(function (data, status, headers, config) {
             $scope.categories = data;
             $scope.error = '';
         }).error(function (data, status, headers, config) {
