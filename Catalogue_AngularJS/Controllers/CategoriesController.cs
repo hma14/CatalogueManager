@@ -21,7 +21,7 @@ namespace Catalogue_AngularJS.Controllers
         // GET: api/Categories
         public IQueryable<CategoryDTO> GETCategory()
         {
-            var categories = (from c in db.Categories
+            var categories = (from c in db.Categories.Include(m => m.Products)
                               select new CategoryDTO
                               {
                                   Id = c.Id,
@@ -44,6 +44,8 @@ namespace Catalogue_AngularJS.Controllers
 
                                                   }).ToList(),
 
+                                  Products = c.Products
+                        
                               });
 
             return categories;
@@ -115,23 +117,9 @@ namespace Catalogue_AngularJS.Controllers
                 CategoryName = category.CategoryName,
                 ParentCategoryId = category.ParentCategoryId,
                 ParentCategoryName = (from cat in db.Categories
-                                      where cat.ParentCategoryId == category.Id
-                                      select category.CategoryName).FirstOrDefault(),
-
-
-
-                CategoryList = (from ca in db.Categories
-                                where ca.ParentCategoryId == category.Id
-                                select new SubCategory
-                                {
-                                    Id = ca.Id,
-                                    CategoryName = ca.CategoryName,
-                                    ParentCategoryId = ca.ParentCategoryId,
-                                    ProdList = (from p in db.Products
-                                                where p.CategoryId == ca.Id
-                                                select p).ToList()
-
-                                }).ToList(),
+                                      where cat.Id == category.ParentCategoryId
+                                      select cat.CategoryName).FirstOrDefault(),
+               
             };
 
             return CreatedAtRoute("DefaultApi", new { id = category.Id }, categoryDTO);
@@ -145,6 +133,15 @@ namespace Catalogue_AngularJS.Controllers
             if (category == null)
             {
                 return NotFound();
+            }
+
+            // Remove sub categories which ParentCategoryId == id
+            var subCategories = (from c in db.Categories
+                                 where c.ParentCategoryId == id
+                                 select c).ToList();
+            foreach (var cat in subCategories)
+            { 
+                db.Categories.Remove(cat);
             }
 
             db.Categories.Remove(category);

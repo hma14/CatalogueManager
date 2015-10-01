@@ -17,6 +17,7 @@ namespace Catalogue_AngularJS.Models
     
         public Catalogue_AngularJSContext() : base("name=Catalogue_AngularJSContext")
         {
+           this.Configuration.LazyLoadingEnabled = false;
         }
 
         public System.Data.Entity.DbSet<Catalogue.Models.Category> Categories { get; set; }

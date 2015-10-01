@@ -5,6 +5,7 @@
 function LoadAllCategories() {
     
     var scope = angular.element('[ng-controller="CatalogueCtrl"]').scope();
+    
     scope.$apply(function () {
         scope.getAllCategories();
     });
@@ -13,9 +14,6 @@ function LoadAllCategories() {
 
 
 angular.module('CatalogueApp', [])
-.config(['$compileProvider', function ($compileProvider) {
-    $compileProvider.debugInfoEnabled(true);
-}])
 .controller('CatalogueCtrl', function ($scope, $http) {
     $scope.categories = [];
     $scope.isEdit = [];
@@ -23,11 +21,11 @@ angular.module('CatalogueApp', [])
     var saveState = {};
 
     $scope.getAllCategories = function () {
-        $http.get('/api/Categories/').success(function (data, status, headers, config) {
+        $http.get('/api/Categories').success(function (data, status, headers, config) {
             $scope.categories = data;
             $scope.error = '';
         }).error(function (data, status, headers, config) {
-            $scope.error = "Oops... GET went wrong";
+            $scope.error = "Oops... GET went wrong, data: " + data + ', ' + status;
         });
     };
 
@@ -36,7 +34,7 @@ angular.module('CatalogueApp', [])
         .success(function (data, status, headers, config) {
             location.reload();
         }).error(function (data, status, headers, config) {
-            $scope.error = "Oops... POST went wrong";
+            $scope.error = "Oops... POST went wrong, data: " + data + ', ' + status;
         });
     };
 
@@ -45,7 +43,7 @@ angular.module('CatalogueApp', [])
         .success(function (data, status, headers, config) {
             location.reload();
         }).error(function (data, status, headers, config) {
-            $scope.error = "Oops... DELETE went wrong";
+            $scope.error = "Oops... DELETE went wrong, data: " + data + ', ' + status;
         });
     };
 
@@ -54,7 +52,7 @@ angular.module('CatalogueApp', [])
         .success(function (data, status, headers, config) {
             location.reload();
         }).error(function (data, status, headers, config) {
-            $scope.error = "Oops... POST went wrong";
+            $scope.error = "Oops... POST went wrong, data: " + data + ', ' + status;
         });
 
     };
@@ -64,7 +62,7 @@ angular.module('CatalogueApp', [])
         .success(function (data, status, headers, config) {
             location.reload();
         }).error(function (data, status, headers, config) {
-            $scope.error = "Oops... DELETE went wrong";
+            $scope.error = "Oops... DELETE went wrong, data: " + data + ', ' + status;
         });
 
     };
@@ -84,7 +82,7 @@ angular.module('CatalogueApp', [])
             $scope.isEdit[data.Id] = false;
             location.reload();
         }).error(function (data, status, headers, config) {
-            $scope.error = "Oops... PUT went wrong";
+            $scope.error = "Oops... PUT went wrong, data: " + data + ', ' + status;
         });
     };
 

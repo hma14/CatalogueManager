@@ -1,10 +1,13 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <parameters>
-  <parameter name="IIS Web Application Name" description="" value="app.lottotry.com/Catalogue" tags="IisApp">
-    <parameterEntry kind="ProviderPath" scope="IisApp" match="^C:\\Users\\henry\\Dropbox\\Catalogue_AngularJS\\Catalogue_AngularJS\\obj\\Release\\Package\\PackageTmp$" />
-    <parameterEntry kind="ProviderPath" scope="setAcl" match="^C:\\Users\\henry\\Dropbox\\Catalogue_AngularJS\\Catalogue_AngularJS\\obj\\Release\\Package\\PackageTmp$" />
+  <parameter name="IIS Web Application Name" description="" value="catalogue" tags="IisApp">
+    <parameterEntry kind="ProviderPath" scope="IisApp" match="^F:\\Catalogue_AngularJS\\Catalogue_AngularJS\\obj\\Release\\Package\\PackageTmp$" />
+    <parameterEntry kind="ProviderPath" scope="setAcl" match="^F:\\Catalogue_AngularJS\\Catalogue_AngularJS\\obj\\Release\\Package\\PackageTmp$" />
+  </parameter>
+  <parameter name="DocPublicSetAclParam" description="" value="catalogue/doc/public" tags="">
+    <parameterEntry kind="ProviderPath" scope="setAcl" match="^F:\\Catalogue_AngularJS\\Catalogue_AngularJS\\obj\\Release\\Package\\PackageTmp\\doc\\public$" />
   </parameter>
   <parameter name="Catalogue_AngularJSContext-Web.config Connection String" description="" value="Data Source=webserver-pc\sqlexpress;Initial Catalog=Catalogue;Integrated Security=True" tags="">
-    <parameterEntry kind="XmlFile" scope="C:\\Users\\henry\\Dropbox\\Catalogue_AngularJS\\Catalogue_AngularJS\\obj\\Release\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='Catalogue_AngularJSContext']/@connectionString" />
+    <parameterEntry kind="XmlFile" scope="F:\\Catalogue_AngularJS\\Catalogue_AngularJS\\obj\\Release\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='Catalogue_AngularJSContext']/@connectionString" />
   </parameter>
 </parameters>
