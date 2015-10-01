@@ -1,0 +1,27 @@
+﻿<!--Add Category-->
+<div>
+    <div class="panel panel-default">
+        <div class="panel-heading">
+            <h4 class="panel-title">Add Category</h4>
+        </div>
+
+        <div class="panel-body">
+            <form class="form-horizontal" ng-submit="addCategory(categoryName, categoryAdd)">
+
+                <div class="form-group h6">
+                    <label for="inputCategoryName" class="col-sm-2 control-label h6">Category Name:</label>
+                    <div class="col-sm-10">
+                        <input type="text" class="form-control" id="inputCategoryName" ng-model="categoryName" />
+                    </div>
+
+                    <label for="selectParentCategoryId" class="col-sm-2 control-label h6">Parent Category:</label>
+                    <div class="col-sm-10">
+                        <select class="form-control" ng-model="categoryAdd" ng-options="cate.CategoryName for cate in categories  | orderBy: 'CategoryName'"></select>
+                    </div>
+
+                </div>
+                <input class="btn btn-info btn-primary btn-sm" type="submit" value="Submit" />
+            </form>
+        </div>
+    </div>
+</div>

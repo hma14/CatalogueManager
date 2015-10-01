@@ -1,0 +1,39 @@
+﻿
+
+
+<table class="table">
+    <tr>
+        <th>Product Name</th>
+        <th>Description</th>
+        <th>Price</th>
+    </tr>
+    <tbody ng-repeat="prod in ca.ProdList">
+        <tr>
+            <td class="col-md-2">
+                <span ng-hide="isEdit[prod.Id]">{{prod.Name}}</span>
+                <textarea class="form-control input-sm" raws="5" ng-show="isEdit[prod.Id]" ng-model="Name">{{prod.Name}}</textarea>
+            </td>
+            <td class="col-md-3">
+                <span ng-hide="isEdit[prod.Id]">{{prod.Description}}</span>
+                <textarea class="form-control input-sm" rows="5" ng-show="isEdit[prod.Id]" ng-model="Description">{{prod.Description}}</textarea>
+            </td>
+            <td class="col-md-1">
+                <span ng-hide="isEdit[prod.Id]">${{prod.Price}}</span>
+                <textarea class="form-control input-sm" rows="3" ng-show="isEdit[prod.Id]" ng-model="Price">{{prod.Price}}</textarea>
+            </td>
+
+            <td class="col-md-1">
+                <div ng-hide="isEdit[prod.Id]">
+                    <a href="#" class="linkButton" ng-click="editProduct(prod)">Edit</a>
+                    <a href="#" class="linkButton" ng-click="deleteProduct(prod)">Delete</a>
+                </div>
+            </td>
+            <td class="col-md-1">
+                <div ng-show="isEdit[prod.Id]">
+                    <a href="#" class="linkButton" ng-click="updateProduct(prod, Name, Description, Price, ca.Id)">Update</a>
+                    <a href="#" class="linkButton" ng-click="cancelProduct()">Cancel</a>
+                </div>
+            </td>
+        </tr>
+    </tbody>
+</table>
