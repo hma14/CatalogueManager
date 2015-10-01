@@ -186,13 +186,9 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201509250237098_initial.cs" />
-    <Compile Include="Migrations\201509250237098_initial.Designer.cs">
-      <DependentUpon>201509250237098_initial.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201509250348253_initial1.cs" />
-    <Compile Include="Migrations\201509250348253_initial1.Designer.cs">
-      <DependentUpon>201509250348253_initial1.cs</DependentUpon>
+    <Compile Include="Migrations\201510011944007_initial.cs" />
+    <Compile Include="Migrations\201510011944007_initial.Designer.cs">
+      <DependentUpon>201510011944007_initial.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Catalogue_AngularJSContext.cs" />
@@ -203,13 +199,11 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Areas\HelpPage\HelpPage.css" />
-    <None Include="Catalogue_AngularJS.wpp.targets_old" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
-    <Content Include="Grant.sql" />
     <Content Include="Scripts\angular-mocks.js" />
     <Content Include="Scripts\angular-resource.js" />
     <Content Include="Scripts\angular-resource.min.js" />
@@ -280,11 +274,8 @@
     <Content Include="Scripts\jquery-1.10.2.min.map" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201509250237098_initial.resx">
-      <DependentUpon>201509250237098_initial.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201509250348253_initial1.resx">
-      <DependentUpon>201509250348253_initial1.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201510011944007_initial.resx">
+      <DependentUpon>201510011944007_initial.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
