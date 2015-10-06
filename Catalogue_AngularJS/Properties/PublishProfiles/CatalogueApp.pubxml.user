@@ -14,55 +14,55 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>09/24/2015 20:33:38</publishTime>
     </File>
     <File Include="Areas/HelpPage/Views/Help/Api.cshtml">
-      <publishTime>09/24/2015 20:33:38</publishTime>
+      <publishTime>10/06/2015 12:29:45</publishTime>
     </File>
     <File Include="Areas/HelpPage/Views/Help/DisplayTemplates/ApiGroup.cshtml">
-      <publishTime>09/24/2015 20:33:38</publishTime>
+      <publishTime>10/06/2015 12:29:51</publishTime>
     </File>
     <File Include="Areas/HelpPage/Views/Help/DisplayTemplates/CollectionModelDescription.cshtml">
-      <publishTime>09/24/2015 20:33:38</publishTime>
+      <publishTime>10/06/2015 12:29:45</publishTime>
     </File>
     <File Include="Areas/HelpPage/Views/Help/DisplayTemplates/ComplexTypeModelDescription.cshtml">
-      <publishTime>09/24/2015 20:33:38</publishTime>
+      <publishTime>10/06/2015 12:29:45</publishTime>
     </File>
     <File Include="Areas/HelpPage/Views/Help/DisplayTemplates/DictionaryModelDescription.cshtml">
-      <publishTime>09/24/2015 20:33:38</publishTime>
+      <publishTime>10/06/2015 12:29:45</publishTime>
     </File>
     <File Include="Areas/HelpPage/Views/Help/DisplayTemplates/EnumTypeModelDescription.cshtml">
-      <publishTime>09/24/2015 20:33:38</publishTime>
+      <publishTime>10/06/2015 12:29:45</publishTime>
     </File>
     <File Include="Areas/HelpPage/Views/Help/DisplayTemplates/HelpPageApiModel.cshtml">
-      <publishTime>09/24/2015 20:33:38</publishTime>
+      <publishTime>10/06/2015 12:29:45</publishTime>
     </File>
     <File Include="Areas/HelpPage/Views/Help/DisplayTemplates/ImageSample.cshtml">
-      <publishTime>09/24/2015 20:33:38</publishTime>
+      <publishTime>10/06/2015 12:29:45</publishTime>
     </File>
     <File Include="Areas/HelpPage/Views/Help/DisplayTemplates/InvalidSample.cshtml">
-      <publishTime>09/24/2015 20:33:38</publishTime>
+      <publishTime>10/06/2015 12:29:45</publishTime>
     </File>
     <File Include="Areas/HelpPage/Views/Help/DisplayTemplates/KeyValuePairModelDescription.cshtml">
-      <publishTime>09/24/2015 20:33:38</publishTime>
+      <publishTime>10/06/2015 12:29:45</publishTime>
     </File>
     <File Include="Areas/HelpPage/Views/Help/DisplayTemplates/ModelDescriptionLink.cshtml">
-      <publishTime>09/24/2015 20:33:38</publishTime>
+      <publishTime>10/06/2015 12:29:45</publishTime>
     </File>
     <File Include="Areas/HelpPage/Views/Help/DisplayTemplates/Parameters.cshtml">
-      <publishTime>09/24/2015 20:33:38</publishTime>
+      <publishTime>10/06/2015 12:29:45</publishTime>
     </File>
     <File Include="Areas/HelpPage/Views/Help/DisplayTemplates/Samples.cshtml">
       <publishTime>09/24/2015 20:33:38</publishTime>
     </File>
     <File Include="Areas/HelpPage/Views/Help/DisplayTemplates/SimpleTypeModelDescription.cshtml">
-      <publishTime>09/24/2015 20:33:38</publishTime>
+      <publishTime>10/06/2015 12:29:45</publishTime>
     </File>
     <File Include="Areas/HelpPage/Views/Help/DisplayTemplates/TextSample.cshtml">
-      <publishTime>09/24/2015 20:33:38</publishTime>
+      <publishTime>10/06/2015 12:29:45</publishTime>
     </File>
     <File Include="Areas/HelpPage/Views/Help/Index.cshtml">
-      <publishTime>09/24/2015 20:33:38</publishTime>
+      <publishTime>10/06/2015 12:29:45</publishTime>
     </File>
     <File Include="Areas/HelpPage/Views/Help/ResourceModel.cshtml">
-      <publishTime>09/24/2015 20:33:38</publishTime>
+      <publishTime>10/06/2015 12:29:45</publishTime>
     </File>
     <File Include="Areas/HelpPage/Views/Shared/_Layout.cshtml">
       <publishTime>09/24/2015 20:33:38</publishTime>
@@ -77,10 +77,13 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>09/24/2015 20:33:42</publishTime>
     </File>
     <File Include="bin/App_global.asax.compiled">
-      <publishTime>09/23/2015 20:28:31</publishTime>
+      <publishTime>10/06/2015 12:56:00</publishTime>
     </File>
     <File Include="bin/App_global.asax.dll">
-      <publishTime>09/23/2015 20:28:31</publishTime>
+      <publishTime>10/06/2015 12:56:00</publishTime>
+    </File>
+    <File Include="bin/CatalogueManager.dll">
+      <publishTime>10/06/2015 12:55:54</publishTime>
     </File>
     <File Include="bin/Catalogue_AngularJS.dll">
       <publishTime>10/01/2015 12:25:07</publishTime>
@@ -203,7 +206,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>09/24/2015 20:33:42</publishTime>
     </File>
     <File Include="PrecompiledApp.config">
-      <publishTime>09/23/2015 20:28:24</publishTime>
+      <publishTime>10/06/2015 12:55:58</publishTime>
     </File>
     <File Include="Scripts/angular-mocks.js">
       <publishTime>09/24/2015 20:33:38</publishTime>
@@ -284,13 +287,13 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>09/29/2015 23:24:58</publishTime>
     </File>
     <File Include="Views/Web.config">
-      <publishTime>09/24/2015 20:33:38</publishTime>
+      <publishTime>10/06/2015 12:29:45</publishTime>
     </File>
     <File Include="Views/_ViewStart.cshtml">
       <publishTime>09/24/2015 20:33:38</publishTime>
     </File>
     <File Include="Web.config">
-      <publishTime>10/01/2015 12:25:08</publishTime>
+      <publishTime>10/06/2015 12:55:55</publishTime>
     </File>
   </ItemGroup>
 </Project>

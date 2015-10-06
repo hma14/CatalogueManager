@@ -1,10 +1,10 @@
 using System;
 using System.Web.Http;
 using System.Web.Mvc;
-using Catalogue_AngularJS.Areas.HelpPage.ModelDescriptions;
-using Catalogue_AngularJS.Areas.HelpPage.Models;
+using CatalogueManager.Areas.HelpPage.ModelDescriptions;
+using CatalogueManager.Areas.HelpPage.Models;
 
-namespace Catalogue_AngularJS.Areas.HelpPage.Controllers
+namespace CatalogueManager.Areas.HelpPage.Controllers
 {
     /// <summary>
     /// The controller that will handle requests for the help page.

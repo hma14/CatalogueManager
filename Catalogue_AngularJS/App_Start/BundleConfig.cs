@@ -1,7 +1,7 @@
 ﻿using System.Web;
 using System.Web.Optimization;
 
-namespace Catalogue_AngularJS
+namespace CatalogueManager
 {
     public class BundleConfig
     {

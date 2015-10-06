@@ -3,7 +3,7 @@ using System.Text;
 using System.Web;
 using System.Web.Http.Description;
 
-namespace Catalogue_AngularJS.Areas.HelpPage
+namespace CatalogueManager.Areas.HelpPage
 {
     public static class ApiDescriptionExtensions
     {

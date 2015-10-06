@@ -1,4 +1,4 @@
-namespace Catalogue_AngularJS.Migrations
+namespace CatalogueManager.Migrations
 {
     using Catalogue.Models;
     using System;
@@ -6,14 +6,14 @@ namespace Catalogue_AngularJS.Migrations
     using System.Data.Entity.Migrations;
     using System.Linq;
 
-    internal sealed class Configuration : DbMigrationsConfiguration<Catalogue_AngularJS.Models.Catalogue_AngularJSContext>
+    internal sealed class Configuration : DbMigrationsConfiguration<CatalogueManager.Models.CatalogueContext>
     {
         public Configuration()
         {
             AutomaticMigrationsEnabled = false;
         }
 
-        protected override void Seed(Catalogue_AngularJS.Models.Catalogue_AngularJSContext context)
+        protected override void Seed(CatalogueManager.Models.CatalogueContext context)
         {
             context.Categories.AddOrUpdate(x => x.Id,
                 new Category() { Id = 1, ParentCategoryId = 0, CategoryName = "TABLETS" },

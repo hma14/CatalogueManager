@@ -10,13 +10,13 @@ using System.Threading.Tasks;
 using System.Web.Http;
 using System.Web.Http.Description;
 using Catalogue.Models;
-using Catalogue_AngularJS.Models;
+using CatalogueManager.Models;
 
-namespace Catalogue_AngularJS.Controllers
+namespace CatalogueManager.Controllers
 {
     public class CategoriesController : ApiController
     {
-        private Catalogue_AngularJSContext db = new Catalogue_AngularJSContext();
+        private CatalogueContext db = new CatalogueContext();
 
         // GET: api/Categories
         public IQueryable<CategoryDTO> GETCategory()

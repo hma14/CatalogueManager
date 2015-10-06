@@ -2,161 +2,51 @@
     <h3>Catalogue Manager</h3>
 </div>
 
-
 <div class="container-fluid" ng-app="CatalogueApp" ng-controller="CatalogueCtrl">
     <div class="alert alert-danger"  ng-hide="error == ''" ng-cloak>
         <p ng-message="required">{{error}}</p>
     </div>
-    <div id="categoryTable" class="col-md-8">
-        <table class="col-md-8 table table-condensed">
-            <thead>
-                <tr>
-                    <h4>Categories</h4>
-                </tr>
-            </thead>
 
+    <!-- Display Categories and Products -->
+    <div id="categoryTable" class="col-md-8">
+        <table class="col-md-8 table table-condensed table-responsive">
+            <caption><h4>Categories</h4></caption>
             <tbody ng-repeat="cate in categories">
 
-                <tr ng-show="cate.CategoryList.length">
-                    <td>
-                        <strong><span class="alert-info">{{cate.ParentCategoryName}}</span></strong>
-                        <ul ng-repeat="ca in cate.CategoryList">
+                <tr ng-if="(cate.CategoryList.length > 0 || cate.Products.length > 0) && cate.ParentCategoryId == 0">
+                    <td >
+                        <span ng-if="cate.ParentCategoryId > 0" class="alert-info"><strong>{{cate.ParentCategoryName}}</strong></span>
+                        <span ng-if="cate.ParentCategoryId == 0" class="alert-info"><strong>{{cate.CategoryName}}</strong></span>
+                        <ul ng-if="cate.ParentCategoryId == 0 && cate.Products.length > 0">
                             <li>
-                                <span class="alert-warning">{{ca.CategoryName}}</span>
-                                <table class="table">
-                                    <th>Product Name</th>
-                                    <th>Description</th>
-                                    <th>Price ($)</th>
-                                    <tbody ng-repeat="prod in ca.ProdList">
-                                        <tr>
-                                            <td class="col-md-2">
-                                                <span ng-hide="isEdit[prod.Id]">{{prod.Name}}</span>
-                                                <textarea class="form-control input-sm" raws="5" ng-show="isEdit[prod.Id]" ng-model="Name">{{prod.Name}}</textarea>
-                                            </td>
-                                            <td class="col-md-3">
-                                                <span ng-hide="isEdit[prod.Id]">{{prod.Description}}</span>
-                                                <textarea class="form-control input-sm" rows="5" ng-show="isEdit[prod.Id]" ng-model="Description">{{prod.Description}}</textarea>
-                                            </td>
-                                            <td class="col-md-1">
-                                                <span ng-hide="isEdit[prod.Id]">{{prod.Price}}</span>
-                                                <textarea class="form-control input-sm" rows="3" ng-show="isEdit[prod.Id]" ng-model="Price">{{prod.Price}}</textarea>
-                                            </td>
-
-                                            <td class="col-md-1">
-                                                <div ng-hide="isEdit[prod.Id]">
-                                                    <a href="#" class="linkButton" ng-click="editProduct(prod)">Edit</a>
-                                                    <a href="#" class="linkButton" ng-click="deleteProduct(prod)">Delete</a>
-                                                </div>
-                                            </td>
-                                            <td class="col-md-1">
-                                                <div ng-show="isEdit[prod.Id]">
-                                                    <a href="#" class="linkButton" ng-click="updateProduct(prod, Name, Description, Price, ca.Id)">Update</a>
-                                                    <a href="#" class="linkButton" ng-click="cancelProduct()">Cancel</a>
-                                                </div>
-                                            </td>
-                                        </tr>
-                                    </tbody>
-                                </table>
+                                @Html.Partial("Products")                                
                             </li>
                         </ul>
 
+                        <ul ng-if="cate.CategoryList.length > 0">
+                            <li ng-repeat="ca in cate.CategoryList">
+                                <span class="alert-warning">{{ca.CategoryName}}</span>
+                                @Html.Partial("ProductsPerCategory")                                                              
+                            </li>
+                        </ul>
                     </td>
                 </tr>
+                
             </tbody>
         </table>
     </div>
 
 
-
-
-
-    <!--Add Category-->
+    
     <div class="col-sm-4 h6">
-        <div>
-            <div class="panel panel-default">
-                <div class="panel-heading">
-                    <h4 class="panel-title">Add Category</h4>
-                </div>
-
-                <div class="panel-body">
-                    <form class="form-horizontal" ng-submit="addCategory(categoryName, categoryAdd)">
-
-                        <div class="form-group h6">
-                            <label for="inputCategoryName" class="col-sm-2 control-label h6">Category Name:</label>
-                            <div class="col-sm-10">
-                                <input type="text" class="form-control" id="inputCategoryName" ng-model="categoryName" />
-                            </div>
-
-                            <label for="selectParentCategoryId" class="col-sm-2 control-label h6">Parent Category:</label>
-                            <div class="col-sm-10">
-                                <select class="form-control" ng-model="categoryAdd" ng-options="cate.CategoryName for cate in categories  | orderBy: 'CategoryName'"></select>
-                            </div>
-                             
-                        </div>
-                        <input class="btn btn-info btn-primary btn-sm" type="submit" value="Submit" />
-                    </form>
-                </div>
-            </div>
-        </div>
-
+        <!--Add Category-->
+        @Html.Partial("AddCategory")
+        
         <!--Delete Category-->
-        <div>
-            <div class="panel panel-default">
-                <div class="panel-heading">
-                    <h4 class="panel-title">Delete Category</h4>
-                </div>
-
-                <div class="panel-body">
-                    <form class="form-horizontal" ng-submit="deleteCategory(categoryDelete)">
-
-                        <div class="form-group h6">
-                            <label for="selectCategoryId" class="col-sm-2 control-label h6">Select to delete:</label>
-                            <div class="col-sm-10">
-                                <select class="form-control" ng-model="categoryDelete" ng-options="cate.CategoryName for cate in categories  | orderBy: 'CategoryName'"></select>
-                            </div>
-                        </div>
-                        <input class="btn btn-info btn-primary btn-sm" type="submit" value="Submit" />
-                    </form>
-                </div>
-            </div>
-        </div>
-
+        @Html.Partial("DeleteCategory")
+        
         <!--Add Product-->
-        <div>
-            <div class="panel panel-default">
-                <div class="panel-heading">
-                    <h4 class="panel-title">Add Product</h4>
-                </div>
-
-                <div class="panel-body">
-                    <form class="form-horizontal" ng-submit="addProduct(name, description, price, productCategory)">
-
-                        <div class="form-group">
-                            <label for="inputName" class="col-sm-2 control-label  h6">Name:</label>
-                            <div class="col-sm-10">
-                                <input type="text" class="form-control" id="inputName" ng-model="name" />
-                            </div>
-                            <label for="inputDescription" class="col-sm-2 control-label h6">Descr:</label>
-                            <div class="col-sm-10">
-                                <input type="text" class="form-control" id="inputDescription" ng-model="description" />
-                            </div>
-                            <label for="inputPrice" class="col-sm-2 control-label  h6">price:</label>
-                            <div class="col-sm-10">
-                                <input type="text" class="form-control" id="inputPrice" ng-model="price" />
-                            </div>
-
-                            <label for="selectParentCategoryId" class="col-sm-2 control-label  h6">Category:</label>
-                            <div class="col-sm-10">
-                                <select class="form-control" ng-model="productCategory" data-ng-options="cate.CategoryName for cate in categories | orderBy: 'CategoryName'"></select>
-                            </div>
-
-                        </div>
-                        <input class="btn btn-info btn-primary btn-sm" type="submit" value="Submit">
-                    </form>
-                </div>
-            </div>
-        </div>
-
+        @Html.Partial("AddProduct")
     </div>
 
 </div>

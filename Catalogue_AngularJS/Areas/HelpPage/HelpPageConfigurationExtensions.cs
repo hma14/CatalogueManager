@@ -11,10 +11,10 @@ using System.Net.Http.Headers;
 using System.Web.Http;
 using System.Web.Http.Controllers;
 using System.Web.Http.Description;
-using Catalogue_AngularJS.Areas.HelpPage.ModelDescriptions;
-using Catalogue_AngularJS.Areas.HelpPage.Models;
+using CatalogueManager.Areas.HelpPage.ModelDescriptions;
+using CatalogueManager.Areas.HelpPage.Models;
 
-namespace Catalogue_AngularJS.Areas.HelpPage
+namespace CatalogueManager.Areas.HelpPage
 {
     public static class HelpPageConfigurationExtensions
     {

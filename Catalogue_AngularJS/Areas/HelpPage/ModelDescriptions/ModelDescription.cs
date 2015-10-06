@@ -1,6 +1,6 @@
 using System;
 
-namespace Catalogue_AngularJS.Areas.HelpPage.ModelDescriptions
+namespace CatalogueManager.Areas.HelpPage.ModelDescriptions
 {
     /// <summary>
     /// Describes a type model.

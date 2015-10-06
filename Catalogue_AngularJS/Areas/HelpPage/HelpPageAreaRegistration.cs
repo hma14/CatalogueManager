@@ -1,7 +1,7 @@
 using System.Web.Http;
 using System.Web.Mvc;
 
-namespace Catalogue_AngularJS.Areas.HelpPage
+namespace CatalogueManager.Areas.HelpPage
 {
     public class HelpPageAreaRegistration : AreaRegistration
     {

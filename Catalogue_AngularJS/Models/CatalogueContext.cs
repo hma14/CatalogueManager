@@ -4,9 +4,9 @@ using System.Data.Entity;
 using System.Linq;
 using System.Web;
 
-namespace Catalogue_AngularJS.Models
+namespace CatalogueManager.Models
 {
-    public class Catalogue_AngularJSContext : DbContext
+    public class CatalogueContext : DbContext
     {
         // You can add custom code to this file. Changes will not be overwritten.
         // 
@@ -15,7 +15,7 @@ namespace Catalogue_AngularJS.Models
         // For more information refer to the documentation:
         // http://msdn.microsoft.com/en-us/data/jj591621.aspx
     
-        public Catalogue_AngularJSContext() : base("name=Catalogue_AngularJSContext")
+        public CatalogueContext() : base("name=CatalogueContext")
         {
            this.Configuration.LazyLoadingEnabled = false;
         }

@@ -1,4 +1,4 @@
-namespace Catalogue_AngularJS.Areas.HelpPage.ModelDescriptions
+namespace CatalogueManager.Areas.HelpPage.ModelDescriptions
 {
     public class EnumValueDescription
     {

@@ -10,6 +10,7 @@
     <WebStackScaffolding_DbContextTypeFullName>Catalogue_AngularJS.Models.Catalogue_AngularJSContext</WebStackScaffolding_DbContextTypeFullName>
     <WebStackScaffolding_IsAsyncSelected>True</WebStackScaffolding_IsAsyncSelected>
     <NameOfLastUsedPublishProfile>CatalogueApp</NameOfLastUsedPublishProfile>
+    <ProjectView>ShowAllFiles</ProjectView>
   </PropertyGroup>
   <ProjectExtensions>
     <VisualStudio>

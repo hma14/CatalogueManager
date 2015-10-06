@@ -1,7 +1,7 @@
 using System;
 using System.Reflection;
 
-namespace Catalogue_AngularJS.Areas.HelpPage.ModelDescriptions
+namespace CatalogueManager.Areas.HelpPage.ModelDescriptions
 {
     public interface IModelDocumentationProvider
     {
