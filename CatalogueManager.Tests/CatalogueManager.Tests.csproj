@@ -3,11 +3,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{E03E4EBB-7644-46B2-AFB1-5C0D0092A2D7}</ProjectGuid>
+    <ProjectGuid>{CED387A9-0496-414E-A2DA-CDD1C001EE27}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>CatalogueManagerUnitTest</RootNamespace>
-    <AssemblyName>CatalogueManagerUnitTest</AssemblyName>
+    <RootNamespace>CatalogueManager.Tests</RootNamespace>
+    <AssemblyName>CatalogueManager.Tests</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <ProjectTypeGuids>{3AC096D0-A1C2-E12C-1390-A8335801FDAB};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
@@ -52,6 +52,7 @@
     </Otherwise>
   </Choose>
   <ItemGroup>
+    <Compile Include="ProductsTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="MathsTests.cs" />
   </ItemGroup>
